@@ -79,4 +79,6 @@ Each string should be like that:
 
 > Warning: Never in your life leave empty strings in configuration files.
 
+>Tip: If something is not clear, check the example project
 
+Little remark: It was late when I was writting it, so it may contain some typo and grammar mistakes.
