@@ -1,0 +1,2 @@
+Number_of_sushkas more 0
+Number_of_sushkas less 5

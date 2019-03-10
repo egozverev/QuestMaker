@@ -1,0 +1,2 @@
+minus_all.txt
+minus_baranka.txt

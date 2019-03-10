@@ -1,0 +1,2 @@
+Number_of_sushkas - 10
+Number_of_barankas make 1
