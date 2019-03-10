@@ -1,5 +1,6 @@
 # QuestMaker project
-MIPT, 2nd term
+> MIPT, 2nd term
+
 This simple project allows everybody to create text quests.
 Instruction how to run scenario:
 - If u have not done it yet, install python3 on your device.
