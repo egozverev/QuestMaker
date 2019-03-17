@@ -9,23 +9,26 @@ Instruction how to run scenario:
 - Run this: python {path_to_main.py}/main.py {path_to_scenario}
 
 Instruction how to create a scenario:
-- Create a new folder for your scenario.
-- Create following folders and files:
-- - locations
+- Create a new .json file for your scenario.
+- Create following objects:
+- - loc_descriptions
+- - loc_changes
+- - loc_messages
+- - loc_next
+- - loc_options
+- - loc_required
 - - state_changes
 - - states
-- - basic_check.txt
-- - default_status.txt
-- Create locations, state changes and states, fill basic_check.txt and default_status.txt. Follow instructions down.
+- - basic_check
+- - default_status
+- Fill each object. Follow instructions down.
 
 Default status:
-This file contains information about status of you character in the beginning of the game.
+It contains information about status of you character in the beginning of the game.
 Just put the name of status_parametr and then its value
-> Note: Don`t use whitespaces in your name, use '_' instead <
 
 States:
-For each state create a file, for example, name.txt
-Each string in this file chekcs some conditions:
+Each string here checks some conditions:
 `parameter operator value`
 Operator may be one of these:
 - is : check if parameter = value
@@ -35,7 +38,7 @@ Operator may be one of these:
 >Note: If parametr doesn`t exist, statement is always false
 
 State changes:
-Each file causes changes of the status.
+They cause changes of the status.
 Each string should look like this:
 `parameter operator value`
 Operator may be one of these:
@@ -46,40 +49,29 @@ Operator may be one of these:
 > Note: If parametr doesn`t exist, operator is automatically make
 
 Locations:
-Each location should be a folder containing following files:
-- description.txt
+- descriptions
 Just a description which the player see when the character enters the location
-- options.txt
+- optionss
 List of options player may choose. Just strings with some text.
-> Note: There is a rule here: one string - one option
 
-- required.txt
+- required
 For each option set the required state. If there are not states, put string 'nothing' there.
 If the state is false, player will get a notification.
-> Note: There is still a rule here: one string - one requirement. If you have to check multiple requirements then write them all in checking file
 
-- changes.txt
-List of changes caused by each option.  Each strhing contains change_name.txt ( or not txt) file
+- changes
+List of changes caused by each option.  Each strhing contains change_name
 
-> Note: There is always  a rule here: one string - one change.
 
-- messages.txt
+- messages
 Just show player some messages depending on the option he has chosen.
-> Note: Again, one string - one message for each option
 
-- next_locations.txt
-Contains the name of locations player will be moved depending on the option he has chosen. 
-> Note: I won`t get tired repeating this, one string - one location for each option
-
+- next
+Contains the name of locations player will be moved depending on the option he has chosen.
 
 Basic check:
 After each changing status programme will check all the states written here and if it succeed in one of them, it reacts.
-Each string should be like that:
-'check.txt location_name'
+Each field should be like that:
+'check': 'location_name'
 > Tip: If you want, for example, check health of the character and send a player to the death-location specailly made for this case,  use this option.
 
-> Warning: Never in your life leave empty strings in configuration files.
-
 >Tip: If something is not clear, check the example project
-
-Little remark: It was late when I was writting it, so it may contain some typo and grammar mistakes.
