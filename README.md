@@ -3,9 +3,9 @@
 
 This simple project allows everybody to create text quests.
 Instruction how to run scenario:
-- If u have not done it yet, install python3 on your device.
+- If you have not done it yet, install python3 on your device.
 - Download a project and remember where main.py is placed.
-- Open you console( you are under windows) / terminal (you are under linux or whatever).
+- Open your console( you are under windows) / terminal (you are under linux or whatever).
 - Run this: python {path_to_main.py}/main.py {path_to_scenario}
 
 Instruction how to create a scenario:
