@@ -7,9 +7,10 @@ def creative_print(str):
 
 def show_interface(config, name):
     '''
-    Show location info , status and list of options
-    :param path: Path to the location
-    :return: Nothing, but print all the input parameters in cool way using CreativePrint()
+    Print everything is needed for 'name' location
+    :param config: dict, scenario file
+    :param name: name of the location
+    :return:
     '''
     description = config["loc_descriptions"][name]
     options = config["loc_options"][name]

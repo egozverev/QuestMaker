@@ -6,6 +6,12 @@ import argparse
 
 
 def check_state(config, state):
+    '''
+
+    :param config: dict, scenario file
+    :param state: state that has to be checked
+    :return:
+    '''
     for line in config["states"][state]:
         line = line.split()
         key = line[0]
@@ -25,6 +31,12 @@ def check_state(config, state):
 
 
 def change_state(config, change):
+    '''
+    Change the status according to 'change'
+    :param config: dict, scenario file
+    :param change: change that has to be done
+    :return:
+    '''
     for line in config["state_changes"][change]:
         line = line.split()
         key = line[0]
