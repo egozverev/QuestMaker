@@ -1,170 +1,171 @@
 {
-    "loc_descriptions": {
-        "start": "\" Sasha was on highway gnawing a sushka\" ( Patter )\n Your name is Sasha and you are currently on the highway. You are in a good mood because you have whole 10 sushkas with you.",
-        "basic": "You are going by the highway gnawing a sushka. What are you going to do ?",
-        "forest_with_bears": "You see a family of bears having a tea party on the clearing.\nThey are drinking tea with SUSHKAS and honey. YOU NEED THESE SUSHKAS, SUSHKAS ARE YOUR LIFE. What are you going to do?",
-        "merchant" : "Wagon has approached. You see a Sancho Panza on his donkey.\nYou ask him:\n-Senoir, what are you doing here?\nHe answers:\n-I`ve left my previous job and now I`m a travelling merchant. I trade the most treasurable things in the world. Sushkas. Do u love sushkas, little girl? If you have some money, I may sell sushkas for you.\nAfter thinking a bit he goes on:\n- Today is a special day. I have a super - sushka in my inventory. It is called \"BARANKA\". It costs 10 simple sushkas. Do u want to buy it?",
-        "2nd_basic": "You are going by the highway. Suddenly u see the gate with the poster 'Sushka`s festival' on it. Do u want to join it?",
-        "house_with_gopnics": "It is a house with gopnics. Your mother always said you to never come close to this place. \nGopnics surround you.\n-Heeey, what do we see here? A little girl joined our great festival.\nAnother one says:\n-It is a festival of sushkas, you know. Do u have sushkas? \nIt seems that these gopnics need you treasurable sushkas. What are you going to do?",
-        "home": "While mooving you have seen your house in the distance. You approach it and get into. Home sushkas-home.\nYou greets your lovely mummy.\nAfter that you have cool SUSHKA-PARTY. You tell your mom funny stories of your travelling. \n( Congrats, you have reached the happy end )",
-        "gameover": "You have ran out of all you dear sushkas!\nLife seems awfull without them. \nYou just sit on the road and start crying. \nYou can`t do anything with it.\nIt is the end."
-
-
-    },
-    "loc_changes": {
-        "start": [
+    "locations": {
+        "start": {
+            "description" : "\" Sasha was on highway gnawing a sushka\" ( Patter )\n Your name is Sasha and you are currently on the highway. You are in a good mood because you have whole 10 sushkas with you.",
+            "change": [
             "nothing",
             "nothing"
         ],
-        "basic": [
+            "message": [
+            "You went left",
+            "Surprisingly you went right"
+        ],
+            "next": [
+            "basic",
+            "basic"
+        ],
+            "option": [
+            "Go left",
+            "Go right"
+        ],
+            "requirement": [
+            "nothing",
+            "nothing"
+        ]
+        },
+        "basic": {
+            "description" : "You are going by the highway gnawing a sushka. What are you going to do ?",
+            "change": [
             "minus_sushka",
             "minus_sushka"
         ],
-        "forest_with_bears": [
+            "message": [
+            "You keep on moving by the highway, gnawing your sushka. In the distance you see a wagon. It is approaching.",
+            "You have left the highway. You entered a clearing in the grove near the highway."
+        ],
+            "next": [
+            "merchant",
+            "forest_with_bears"
+        ],
+            "option": [
+            "Keep moving",
+            "Try to leave the highway"
+        ],
+            "requirement": [
+            "nothing",
+            "nothing"
+        ]
+        },
+        "forest_with_bears": {
+            "description" : "You see a family of bears having a tea party on the clearing.\nThey are drinking tea with SUSHKAS and honey. YOU NEED THESE SUSHKAS, SUSHKAS ARE YOUR LIFE. What are you going to do?",
+            "change":  [
             "plus_5_sushka",
             "minus_5_sushka",
             "minus_all"
         ],
-        "merchant": [
-            "trade",
-            "stealing",
-            "minus_sushka"
-        ],
-        "2nd_basic": [
-            "nothing",
-            "nothing"
-        ],
-        "house_with_gopnics": [
-            "minus_all",
-            "minus_baranka"
-        ],
-        "home": [],
-        "gameover": []
-
-    },
-    "loc_messages":{
-        "start": [
-            "You went left",
-            "Surprisingly you went right"
-        ],
-        "basic": [
-            "You keep on moving by the highway, gnawing your sushka. In the distance you see a wagon. It is approaching.",
-            "You have left the highway. You entered a clearing in the grove near the highway."
-        ],
-        "forest_with_bears": [
+            "message": [
             "They greet you as well. You are having nice party with sushkas and discussing building sushkas`s factory on the highway to make all the SUSHKAS_LOVERS riding pass it happier. After all they give you several extra sushkas and wish a lucky trip. You leave the forest.",
             "They are angry at you for interrupting such a nice party. You are chased away from the forest with shame. You are so embarassed. During walking back you lose some of amazing sushkas you had before. Such a lose.",
             "HOW DARE YOU, STUPID HUMAN, TO INTERRUPT SUCH A NICE PARTY WITH STEALING LITTLE BEAR`S SUSHKAS??? Family of bears punish you - they do the worst thing in the world - they take all your sushkas and give you a kick ass. "
         ],
-        "merchant": [
-            "You have buyed a 'BARANKA'. You place it by you heart and keep on going. After some time you decide to check your super-sushka. And you suddenly realise that 'BARANKA' doesn`t look like a sushka anymore. You are angry. THAT BASTARD STOLE 10 GREAT SO TASTY SUSHKAS FROM YOU. YOU WILL NEVER FORGIVE HIM. You try to find him but he seems disappeared.",
-            "You have stolen a 'BARANKA' You place it by you heart and keep on going. After some time you decide to check your super-sushka. And you suddnely realise that 'BARANKA' is not a sushka at all. Now the excitement of having such a treasure is over and the shame overwhelms you.",
-            "You just keep on moving leaving merchant on you back."
-        ],
-        "2nd_basic": [
-            "You enter the gates and enter some ... house. There are people there. After mentioning that there are no sushkas you look at people`s face. And you recognise them. You know this place.",
-            "You keep on moving."
-        ],
-        "house_with_gopnics": [
-            "They... they... how can people be so cruel? They just take all you sushkas and pack you off the house.",
-            "Uff... they believed that 'BARANKA' is much better than just some sushkas. You managed to save all your treasures. You leave the house and keep on moving by the highway."
-        ],
-        "home": [],
-        "gameover": []
-
-    },
-    "loc_next":{
-        "start": [
-            "basic",
-            "basic"
-        ],
-        "basic": [
+            "next": [
             "merchant",
-            "forest_with_bears"
-        ],
-        "forest_with_bears": [
-            "merchant" ,
             "merchant",
             "2nd_basic"
-        ],
-        "merchant": [
-            "2nd_basic",
-            "2nd_basic",
-            "2nd_basic"
-        ],
-        "2nd_basic": [
-            "house_with_gopnics",
-            "home"
-        ],
-        "house_with_gopnics": [
-            "gameover",
-            "home"
-        ],
-        "home": [],
-        "gameover": []
-
-    },
-    "loc_options":{
-        "start": [
-            "Go left",
-            "Go right"
-        ],
-        "basic": [
-            "Keep moving",
-            "Try to leave the highway"
-        ],
-        "forest_with_bears": [
+            ],
+            "option": [
             "To greet them and say that you also have some sushkas and want to share with them ( it seems their sushkas is running out ). ( You are a kind girl, but you need at least 5 lovely sushkas to do it)",
             "To ask them to share their sushkas with you because I AM A SUSHKA-LOVER, HOW CAN YOU LEAVE ME WITHOUT ADORABLE SUSHKAS? ( You are a brave girl )",
             "To take away sushkas from baby-bear and run away with YOUR FREE SUSHKAS!!! ( You are a bad girl )"
         ],
-        "merchant": [
+            "requirement": [
+            "satisfied",
+            "nothing",
+            "nothing"
+        ]
+        },
+        "merchant": {
+            "description" : "Wagon has approached. You see a Sancho Panza on his donkey.\nYou ask him:\n-Senoir, what are you doing here?\nHe answers:\n-I`ve left my previous job and now I`m a travelling merchant. I trade the most treasurable things in the world. Sushkas. Do u love sushkas, little girl? If you have some money, I may sell sushkas for you.\nAfter thinking a bit he goes on:\n- Today is a special day. I have a super - sushka in my inventory. It is called \"BARANKA\". It costs 10 simple sushkas. Do u want to buy it?",
+            "change": [
+            "trade",
+            "stealing",
+            "minus_sushka"
+        ],
+            "message": [
+            "You have buyed a 'BARANKA'. You place it by you heart and keep on going. After some time you decide to check your super-sushka. And you suddenly realise that 'BARANKA' doesn`t look like a sushka anymore. You are angry. THAT BASTARD STOLE 10 GREAT SO TASTY SUSHKAS FROM YOU. YOU WILL NEVER FORGIVE HIM. You try to find him but he seems disappeared.",
+            "You have stolen a 'BARANKA' You place it by you heart and keep on going. After some time you decide to check your super-sushka. And you suddnely realise that 'BARANKA' is not a sushka at all. Now the excitement of having such a treasure is over and the shame overwhelms you.",
+            "You just keep on moving leaving merchant on you back."
+        ],
+            "next": [
+            "2nd_basic",
+            "2nd_basic",
+            "2nd_basic"
+        ],
+            "option" : [
             "Buy a super-sushka from him ( You need 10 worhipped sushkas - are you ready to say them 'Bye-bye'? )",
             "Try to steal a 'BARANKA' from him.",
             "Ten sushkas for one sushka? How did he dare to make such a vulgar suggestion. Just ignore poor man and pretend to be busy with eating our own sushka. "
         ],
-        "2nd_basic": [
-            "Join a festival",
-            "Keep on moving"
-        ],
-        "house_with_gopnics": [
-            "Try to give them some sushkas.",
-            "Use your natural charm and try to push them 'BARANKA' ( You need 'BARANKA' to do it)."
-        ],
-        "home": [],
-        "gameover": []
-
-    },
-    "loc_required":{
-        "start": [
-            "nothing",
-            "nothing"
-        ],
-        "basic": [
-            "nothing",
-            "nothing"
-        ],
-        "forest_with_bears": [
-            "satisfied",
-            "nothing",
-            "nothing"
-        ],
-        "merchant": [
+            "requirement": [
             "happy",
             "nothing",
             "nothing"
-        ],
-        "2nd_basic": [
+        ]
+        },
+        "2nd_basic": {
+            "description" : "You are going by the highway. Suddenly u see the gate with the poster 'Sushka`s festival' on it. Do u want to join it?",
+            "change": [
             "nothing",
             "nothing"
         ],
-        "house_with_gopnics": [
+            "message": [
+            "You enter the gates and enter some ... house. There are people there. After mentioning that there are no sushkas you look at people`s face. And you recognise them. You know this place.",
+            "You keep on moving."
+        ],
+            "next": [
+            "house_with_gopnics",
+            "home"
+        ],
+            "option": [
+            "Join a festival",
+            "Keep on moving"
+        ],
+            "requirement": [
+            "nothing",
+            "nothing"
+        ]
+        },
+        "house_with_gopnics": {
+            "description" : "It is a house with gopnics. Your mother always said you to never come close to this place. \nGopnics surround you.\n-Heeey, what do we see here? A little girl joined our great festival.\nAnother one says:\n-It is a festival of sushkas, you know. Do u have sushkas? \nIt seems that these gopnics need you treasurable sushkas. What are you going to do?",
+            "change": [
+            "minus_all",
+            "minus_baranka"
+        ],
+            "message": [
+            "They... they... how can people be so cruel? They just take all you sushkas and pack you off the house.",
+            "Uff... they believed that 'BARANKA' is much better than just some sushkas. You managed to save all your treasures. You leave the house and keep on moving by the highway."
+            ],
+            "next": [
+            "house_with_gopnics",
+            "home"
+        ],
+            "option": [
+            "Try to give them some sushkas.",
+            "Use your natural charm and try to push them 'BARANKA' ( You need 'BARANKA' to do it)."
+        ],
+            "requirement": [
             "nothing",
             "baranka"
-        ],
-        "home": [],
-        "gameover": []
+        ]
+        },
+        "home": {
+            "description" : "While mooving you have seen your house in the distance. You approach it and get into. Home sushkas-home.\nYou greets your lovely mummy.\nAfter that you have cool SUSHKA-PARTY. You tell your mom funny stories of your travelling. \n( Congrats, you have reached the happy end )",
+            "change": [],
+            "message": [],
+            "next": [],
+            "option": [],
+            "requirement": []
 
+        },
+        "gameover": {
+            "description" : "You have ran out of all you dear sushkas!\nLife seems awfull without them. \nYou just sit on the road and start crying. \nYou can`t do anything with it.\nIt is the end.",
+            "change": [],
+            "message": [],
+            "next": [],
+            "option": [],
+            "requirement": []
+
+        }
     },
     "state_changes":{
         "awfull": [
